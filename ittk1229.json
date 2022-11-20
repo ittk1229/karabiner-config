@@ -110,7 +110,7 @@
       ]
     },
     {
-      "description": "US-like keys: map jis symbols to us symbols",
+      "description": "US-like symbols: map jis symbols to us symbols",
       "manipulators": [
         {
           "type": "basic",
