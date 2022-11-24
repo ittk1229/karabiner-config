@@ -2,22 +2,6 @@
   "title": "for ittk1229",
   "rules": [
     {
-      "description": "escape for japanese vimmer: map ctrl + [ to escape → japanese_eisuu",
-      "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "open_bracket",
-            "modifiers": {
-              "mandatory": ["control"],
-              "optional": ["any"]
-            }
-          },
-          "to": [{ "key_code": "escape" }, { "key_code": "japanese_eisuu" }]
-        }
-      ]
-    },
-    {
       "description": "vim-like arrows: map ctrl + h/j/k/l to ←/↓/↑/→",
       "manipulators": [
         {
@@ -90,22 +74,112 @@
           "from": {
             "key_code": "japanese_kana",
             "modifiers": {
-              "mandatory": ["control"],
               "optional": ["any"]
             }
           },
-          "to": [{ "key_code": "return_or_enter" }]
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "fn",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "right_command",
             "modifiers": {
-              "mandatory": ["control"],
               "optional": ["any"]
             }
           },
-          "to": [{ "key_code": "delete_or_backspace" }]
+          "to": [
+            {
+              "key_code": "left_shift",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_kana"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_eisuu",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_command",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [{ "key_code": "escape" }, { "key_code": "japanese_eisuu" }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "caps_lock",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "fn"
+            }
+          ]
         }
       ]
     },
@@ -155,26 +229,7 @@
             }
           ]
         },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "optional": ["shift", "control", "option", "command"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "return_or_enter"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "keyboard_type_if",
-              "keyboard_types": ["jis"]
-            }
-          ]
-        },
+
         {
           "type": "basic",
           "from": {
@@ -454,6 +509,7 @@
             }
           ]
         },
+
         {
           "type": "basic",
           "from": {
@@ -570,14 +626,38 @@
           },
           "to": [
             {
-              "key_code": "international3",
-              "modifiers": ["left_option"]
+              "key_code": "return_or_enter"
             }
           ],
           "conditions": [
             {
               "type": "keyboard_type_if",
               "keyboard_types": ["jis"]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "spacebar as right control: map spacebar to right shift if combined with other keys",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
             }
           ]
         }
