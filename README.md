@@ -52,3 +52,12 @@ JIS 配列の MacBook 用の Karabiner-Elements Complex Modifications
   - 親指で <kbd>⇧</kbd> を入力可能に
 - <kbd>右 ⇧</kbd> を <kbd>⌦</kbd> (windows の <kbd>Del</kbd> に相当) に変換
   - <kbd>⌦</kbd> を単体で入力可能に
+- <kbd>⇪</kbd> を <kbd>fn</kbd> に変換
+  - <kbd>fn</kbd> を <kbd>⌫</kbd> に割り当てたため、ここで整合性をとる
+  - <kbd>⇪</kbd> は不要と判断し、他のキーに割り当てていない
+
+### esc to screenshot
+
+- <kbd>esc</kbd> を <kbd>⇧⌘5</kbd> に変換
+  - <kbd>⇥</kbd> を <kbd>esc</kbd> に割り当てたため、空いた <kbd>esc</kbd> を有効活用
+  - スクリーンショットツールが 1 キーで呼び出し可能に

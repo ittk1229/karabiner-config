@@ -67,7 +67,7 @@
       ]
     },
     {
-      "description": "corne-like keys: map ctrl + japanese_kana/right_command to enter/backspacd",
+      "description": "corne-like keys",
       "manipulators": [
         {
           "type": "basic",
@@ -654,7 +654,7 @@
       ]
     },
     {
-      "description": "spacebar as right control: map spacebar to right shift if combined with other keys",
+      "description": "spacebar as control: map spacebar to control if combined with other keys",
       "manipulators": [
         {
           "type": "basic",
@@ -673,6 +673,26 @@
           "to_if_alone": [
             {
               "key_code": "spacebar"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "esc to screenshot",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "5",
+              "modifiers": ["shift", "command"]
             }
           ]
         }
