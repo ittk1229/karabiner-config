@@ -18,18 +18,19 @@ JIS 配列の MacBook 用の Karabiner-Elements Complex Modifications
 
 ---
 
-### space as control
+### space as right control
 
-- <kbd>␣</kbd> を他のキーと組み合わせて入力する場合 <kbd>⌃</kbd> に変換
+- <kbd>␣</kbd> を他のキーと組み合わせて入力する場合 <kbd>右 ⌃</kbd> に変換
   - 本来左手小指で入力する必要がある <kbd>⌃</kbd> を親指で入力可能に
-
----
+  - <kbd>⌃</kbd> と干渉しない独自のキーバインドを設定可能
 
 ### vim-like arrows
 
-- <kbd>⌃h</kbd>, <kbd>⌃j</kbd>, <kbd>⌃k</kbd>, <kbd>⌃l</kbd> をそれぞれ <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd> に変換
+space as right control と組み合わせて使用
+
+- <kbd>右 ⌃h</kbd>, <kbd>右 ⌃j</kbd>, <kbd>右 ⌃k</kbd>, <kbd>右 ⌃l</kbd> をそれぞれ <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>↑</kbd>, <kbd>→</kbd> に変換
   - ホームポジションを崩さず矢印キーが使用可能に
-  - 標準の <kbd>⌃h</kbd> による削除が使えなくなるので注意
+  - 標準の <kbd>⌃h</kbd> による削除は <kbd>左 ⌃h</kbd> で利用可能
 
 ---
 
@@ -43,8 +44,8 @@ JIS 配列の MacBook 用の Karabiner-Elements Complex Modifications
 - <kbd>⌃</kbd> の単押しを <kbd>⇥</kbd> に変換
   - <kbd>⇥</kbd> を <kbd>esc</kbd> に割り当てたため、ここで整合性をとる
   - 他のキーと組み合わせて入力した場合は <kbd>⌃</kbd> が入力される
-- <kbd>かな</kbd>, <kbd>fn</kbd> をそれぞれ <kbd>↩︎</kbd> ,<kbd>⌫</kbd> に変換
-  - 親指で <kbd>↩︎</kbd> と <kbd>⌫</kbd> の入力が可能に
+- <kbd>かな</kbd> を <kbd>↩︎</kbd> に変換
+  - 親指で <kbd>↩︎</kbd> を入力可能に
 - <kbd>英数</kbd> を他のキーと組み合わせて入力する場合 <kbd>⌘</kbd> に変換
   - 親指のより近い位置で <kbd>⌘</kbd> を入力可能に
 - <kbd>右 ⌘</kbd> の単押しを <kbd>かな</kbd> に、他のキーと組み合わせての入力を <kbd>⇧</kbd> に変換
@@ -52,9 +53,11 @@ JIS 配列の MacBook 用の Karabiner-Elements Complex Modifications
   - 親指で <kbd>⇧</kbd> を入力可能に
 - <kbd>右 ⇧</kbd> を <kbd>⌦</kbd> (windows の <kbd>Del</kbd> に相当) に変換
   - <kbd>⌦</kbd> を単体で入力可能に
-- <kbd>⇪</kbd> を <kbd>fn</kbd> に変換
-  - <kbd>fn</kbd> を <kbd>⌫</kbd> に割り当てたため、ここで整合性をとる
+- <kbd>⇪</kbd> を 絵文字キーボードのショートカット(<kbd>⌃⌘␣</kbd>) に変換
+  - 絵文字キーボードを 1 キーで呼び出し可能に
   - <kbd>⇪</kbd> は不要と判断し、他のキーに割り当てていない
+
+---
 
 ### esc to screenshot
 

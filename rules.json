@@ -9,7 +9,7 @@
           "from": {
             "key_code": "k",
             "modifiers": {
-              "mandatory": ["control"],
+              "mandatory": ["right_control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -24,7 +24,7 @@
           "from": {
             "key_code": "h",
             "modifiers": {
-              "mandatory": ["control"],
+              "mandatory": ["right_control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -39,7 +39,7 @@
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": ["control"],
+              "mandatory": ["right_control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -54,7 +54,7 @@
           "from": {
             "key_code": "l",
             "modifiers": {
-              "mandatory": ["control"],
+              "mandatory": ["right_control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -80,20 +80,6 @@
           "to": [
             {
               "key_code": "return_or_enter"
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "fn",
-            "modifiers": {
-              "optional": ["any"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "delete_or_backspace"
             }
           ]
         },
@@ -177,7 +163,8 @@
           },
           "to": [
             {
-              "key_code": "fn"
+              "key_code": "spacebar",
+              "modifiers": ["command", "control"]
             }
           ]
         },
@@ -654,7 +641,7 @@
       ]
     },
     {
-      "description": "spacebar as control: map spacebar to control if combined with other keys",
+      "description": "spacebar as right control: map spacebar to right control if combined with other keys",
       "manipulators": [
         {
           "type": "basic",
@@ -666,7 +653,7 @@
           },
           "to": [
             {
-              "key_code": "left_control",
+              "key_code": "right_control",
               "lazy": true
             }
           ],
