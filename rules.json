@@ -9,7 +9,7 @@
           "from": {
             "key_code": "k",
             "modifiers": {
-              "mandatory": ["right_control"],
+              "mandatory": ["control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -24,7 +24,7 @@
           "from": {
             "key_code": "h",
             "modifiers": {
-              "mandatory": ["right_control"],
+              "mandatory": ["control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -39,7 +39,7 @@
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": ["right_control"],
+              "mandatory": ["control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -54,7 +54,7 @@
           "from": {
             "key_code": "l",
             "modifiers": {
-              "mandatory": ["right_control"],
+              "mandatory": ["control"],
               "optional": ["left_shift", "right_shift", "left_gui", "right_gui", "left_alt", "right_alt"]
             }
           },
@@ -72,14 +72,49 @@
         {
           "type": "basic",
           "from": {
+            "key_code": "international1",
+            "modifiers": {
+              "optional": ["control", "option", "command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "keyboard_type_if",
+              "keyboard_types": ["jis"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
             "key_code": "japanese_kana",
             "modifiers": {
-              "optional": ["any"]
+              "optional": ["option", "left_control", "command", "fn", "shift"]
             }
           },
           "to": [
             {
               "key_code": "return_or_enter"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_kana",
+            "modifiers": {
+              "mandatory": ["right_control"],
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
             }
           ]
         },
@@ -188,50 +223,6 @@
     {
       "description": "US-like symbols: map jis symbols to us symbols",
       "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "international1",
-            "modifiers": {
-              "optional": ["control", "option", "command"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "international3",
-              "modifiers": ["left_option"]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "keyboard_type_if",
-              "keyboard_types": ["jis"]
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "international1",
-            "modifiers": {
-              "optional": ["control", "option", "command"],
-              "mandatory": ["shift"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "international3",
-              "modifiers": ["left_shift"]
-            }
-          ],
-          "conditions": [
-            {
-              "type": "keyboard_type_if",
-              "keyboard_types": ["jis"]
-            }
-          ]
-        },
-
         {
           "type": "basic",
           "from": {
@@ -511,7 +502,6 @@
             }
           ]
         },
-
         {
           "type": "basic",
           "from": {
@@ -628,7 +618,30 @@
           },
           "to": [
             {
-              "key_code": "return_or_enter"
+              "key_code": "international3",
+              "modifiers": ["option"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "keyboard_type_if",
+              "keyboard_types": ["jis"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "backslash",
+            "modifiers": {
+              "mandatory": ["shift"],
+              "optional": ["control", "option", "command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "international3",
+              "modifiers": ["shift"]
             }
           ],
           "conditions": [
